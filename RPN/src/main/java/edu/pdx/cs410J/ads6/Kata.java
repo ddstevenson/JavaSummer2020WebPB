@@ -45,8 +45,10 @@ public class Kata {
             stack.push(stack.pop() / num2);
             break;
           case "MAX":
+            stack.push(java.util.Collections.max(stack)); // max int
             break;
           case "MIN":
+            //stack.push(java.util.Collections.max(stack.peek())); 
             break;
           case "SQRT":
             break;
