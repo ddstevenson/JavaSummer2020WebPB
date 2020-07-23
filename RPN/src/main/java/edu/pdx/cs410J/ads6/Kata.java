@@ -31,12 +31,18 @@ public class Kata {
         //result += calculation();
         switch (arg) {
           case "+":
+            stack.push(stack.pop() + stack.pop());
             break;
           case "-":
+            int num1 = stack.pop();
+            stack.push(stack.pop()-num1);
             break;
           case "*":
+            stack.push(stack.pop() * stack.pop());
             break;
           case "/":
+            int num2 = stack.pop();
+            stack.push(stack.pop() / num2);
             break;
           case "MAX":
             break;
