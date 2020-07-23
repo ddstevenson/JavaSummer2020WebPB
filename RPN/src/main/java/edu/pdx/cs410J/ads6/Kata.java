@@ -13,18 +13,46 @@ public class Kata {
 
   public static void main(String[] args) {
     System.err.println("Missing command line arguments");
-    Stack<String> stack = new Stack<String>();
-    String operators = "+-/*";
-    int num1, num2;
+    Stack<Integer> stack = new Stack<>();
+    //String operators = "+-/*";
+    //int num1, num2;
     // 2 3 + 4 *
-    for(int i=0; i<args.length; i++){
-      if(operators.contains(args[i])){
-        num1 = Integer.parseInt(stack.pop());
-        num2 = Integer.parseInt(stack.pop());
+
+    int result = 0;
+    for(String arg : args){
+
+      // if number, parse get the number -> stack
+      int number;
+      try {
+        number = Integer.parseInt(arg);
+        stack.push(number);
+      } catch (NumberFormatException e) {
+        // do the calculation
+        //result += calculation();
+        switch (arg) {
+          case "+":
+            break;
+          case "-":
+            break;
+          case "*":
+            break;
+          case "/":
+            break;
+          case "MAX":
+            break;
+          case "MIN":
+            break;
+          case "SQRT":
+            break;
+          default:
+            // else error report
+            System.err.println("Unrecognized operator! " + arg);
+            break;
+        }
       }
-      else{
-        stack.push(args[i]);
-      }
+
+
+
 
 
     }
